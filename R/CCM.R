@@ -35,7 +35,6 @@ CCM<-function(x,y,tau,E,LMN,...){
   library(parallel)
   cl<-makeCluster(getOption("cl.cores",8))
   clusterEvalQ(cl,library(FNN))
-  clusterExport(cl,c('SugiX','SugiY'))
   dat<-floor((L-Ti+1)/2)
   j=(dat+1):(L-Ti+1)
   Sugi<-parLapply(cl,j,function(ii,Xm,Ym){
