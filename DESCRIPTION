@@ -3,9 +3,15 @@ Type: Package
 Title: Calculate the Causality between variables
 Version: 0.1
 Date: 2016-06-19
-Author: Cheng Feifan
+Author: Cheng Feifan <chengff11@gmail.com>
 Maintainer: Cheng Feifan <chengff11@gmail.com>
-Description: Detecting causality between the variables is a difficult job.
-This package includes several general methods to detect the causality.
+Description: Detecting causality between the variables is a difficult job.This package includes several general methods to detect the causality.
 License: GPL-3
 LazyData: TRUE
+Depends:
+        R (>= 3.2.3)
+Imports:
+        parallel,
+        FNN
+RoxygenNote: 5.0.1
+

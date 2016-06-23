@@ -7,7 +7,6 @@
 #' result<-CCM(x,y,tau=1,E=2)
 #' @details This method is proposed by the Sugihara, which is based on the Taken's Theorem.
 #' @export
-library(FNN)
 CCM<-function(x,y,tau,E,LMN,...){
   if(nargs()<4){
     stop('bad input')
