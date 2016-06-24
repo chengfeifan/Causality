@@ -10,9 +10,25 @@ CCM(x, y, tau, E, LMN, ...)
 \item{x}{A vector represent the time series}
 
 \item{y}{A vector represent the time series}
+
+\item{tau}{The time interval of sample}
+
+\item{E}{The embedding dimension}
 }
 \value{
 A list of SugiX, SugiY, OriginX, OriginY, CorX, CorY
+
+$SugiX The value of X estimated by CCM, a vector
+
+$SugiY The value of Y estimated by CCM, a verctor
+
+$OriginX The original value of X, a vector
+
+$OriginY The original value of Y, a vector
+
+$CorX The correlation coefficient between SugiX and OriginX
+
+$CorY The correlation coefficient betwwen SugiY and OriginY
 }
 \description{
 The original Convergent Cross Mapping

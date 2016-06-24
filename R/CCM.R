@@ -1,7 +1,15 @@
 #' The original Convergent Cross Mapping
 #' @param x A vector represent the time series
 #' @param y A vector represent the time series
+#' @param E The embedding dimension
+#' @param tau The time interval of sample
 #' @return A list of SugiX, SugiY, OriginX, OriginY, CorX, CorY
+#' @return $SugiX The value of X estimated by CCM, a vector
+#' @return $SugiY The value of Y estimated by CCM, a verctor
+#' @return $OriginX The original value of X, a vector
+#' @return $OriginY The original value of Y, a vector
+#' @return $CorX The correlation coefficient between SugiX and OriginX
+#' @return $CorY The correlation coefficient betwwen SugiY and OriginY
 #' @examples x<-c(1:100)
 #' y<-c(100:1)
 #' result<-CCM(x,y,tau=1,E=2)
@@ -51,6 +59,7 @@ CCM<-function(x,y,tau,E,LMN,...){
 
     return(list(SugiX,SugiY))
   },Xm,Ym)
+  stopCluster(cl)
   Sugi<-unlist(Sugi)
   SugiX<-Sugi[seq(1,length(Sugi),2)]
   SugiY<-Sugi[seq(2,length(Sugi),2)]
