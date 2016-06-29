@@ -71,9 +71,11 @@ CCF<-function(x,y,lag.max,...){
 
 plot.CCF<-function(x,...){
   plot(x$lag,x$CCF,type='l',lwd=2,xlab='lag',ylab='ccf',lty=1
-       ,main = )
+       ,main = 'CCF' )
 }
 
 print.CCF<-function(x,...){
-
+  result<-data.frame(x$lag,y$CCF)
+  colnames(result)<-c("lag","CCF")
+  print(result)
 }
